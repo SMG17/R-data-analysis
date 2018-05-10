@@ -166,7 +166,7 @@ abline(h=0)
 
 # Run model with Group fixed effect and Day smoothing term:
 gamm22 <- gamm(Grooming_TotalDur_after ~ Group 
-               + s(Day), # interaction term for factor (Group)
+               + s(Day),
                random = list(Bat_ID =~ 1),
                data = Data_Grooming_TotalDur_after,
                family = negbin(c(1,10)))
